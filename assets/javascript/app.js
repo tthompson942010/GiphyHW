@@ -28,7 +28,7 @@ $(document).ready(function(){
 	//click function for topic buttons to display search results
 	$(document).on('click','.topicButtons', function(){
 		var searchReturn = $(this).html();
-		var queryUrl = 'http://api.giphy.com/v1/gifs/search?q=' + searchReturn + '&limit=12&rating=pg&api_key=dc6zaTOxFJmzC';
+		var queryUrl = 'https://api.giphy.com/v1/gifs/search?q=' + searchReturn + '&limit=12&rating=pg&api_key=dc6zaTOxFJmzC';
 		$.ajax({url: queryUrl, method: 'GET'})
 		.done(function(response){
 			console.log(response)
