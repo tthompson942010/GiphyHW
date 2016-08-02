@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giphy HW</title>
+	<link rel='reset' href='assets/css/reset.css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+</head>
+<body>
+<div class='container'>
+	<div class='row'>
+		<div class='col-lg-12'>
+			<div id='buttonList'>
+			</div>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='col-lg-8'>
+			<div id='searchResults'>
+				<h2>You haven't searched anything yet!</h2>
+				<p>Select a character from the list above, or add your own with the form on the right</p>
+			</div>
+		</div>
+		<div class='col-lg-4' >
+			<div class='panel panel-default'>
+					<div class='panel-heading'>
+						<h3 class='panel-title'><strong>Add a new button!</strong></h3>
+					</div>
+				<div class='panel-body' id='addForm'>
+						<p>What would you like to search for?</p>
+						<button class='btn btn-success'>submit</button>
+						<input id="userAdd" type="text" placeholder="ex. Livin' like Larry" class="mdtextbox">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>

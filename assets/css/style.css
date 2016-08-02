@@ -1,0 +1,33 @@
+body {
+	background-color: lightgrey;
+}
+
+#addForm {
+	background-color: white;
+}
+
+#buttonList {
+	padding: 40px;
+	margin-bottom: 60px;
+}
+
+.topicButtons {
+	margin: 2px;
+}
+
+.searchResults {
+	max-width: 150px;
+	max-height:150px;
+}
+
+
+.hidden {
+	display: none;
+}
+
+.resultDiv {
+	float: left;
+	margin: 5px;
+	width: 150px;
+	height: 150px;
+}
