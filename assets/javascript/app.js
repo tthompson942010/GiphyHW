@@ -11,7 +11,7 @@ $(document).ready(function(){
 	'Plankton',
 	'Mrs. Puff',
 	]
-
+//loops through array to make topic buttons
 	function initButton(){
 		$('#buttonList').empty();
 		for (i = 0; i < topics.length; i++){
@@ -25,7 +25,7 @@ $(document).ready(function(){
 		}
 	}
 	initButton()
-	//click function for topic buttons to display search results
+//click function for topic buttons to display search results
 	$(document).on('click','.topicButtons', function(){
 		var searchReturn = $(this).html();
 		var queryUrl = 'https://api.giphy.com/v1/gifs/search?q=' + searchReturn + '&limit=12&rating=pg&api_key=dc6zaTOxFJmzC';
@@ -45,19 +45,13 @@ $(document).ready(function(){
 				image.attr('animated', moveGif)
 				image.attr('currently', 'still')
 				image.addClass('searchResults')
-				// var gif = $('<img>')
-				// var moveGif = response.data[i].images.original.url
-				// gif.attr('src', stillGif)
-				// gif.addClass('searchResults')
-				// gif.addClass('hidden')
-				// gif.appendTo(resultDiv)
 				image.appendTo(resultDiv)
 				resultDiv.appendTo(resultbox)
 			}
 
 		})
 	})
-	//click function to start/stop gif animations
+//click function to start/stop gif animations
 	$(document).on('click','.searchResults', function(){
 		var state = $(this).attr('currently')
 
@@ -72,7 +66,7 @@ $(document).ready(function(){
 
 	
 	})
-
+//adds a new button to topics
 	$(document).on('click', '.btn-success', function(){
 		newButton = $('#userAdd').val();
 		topics.push(newButton);
@@ -83,4 +77,3 @@ $(document).ready(function(){
 	
 })
 
-//Need to print: response.data[1].rating, response.data[1].images.original.url, response.data[1].images.original-still.url
