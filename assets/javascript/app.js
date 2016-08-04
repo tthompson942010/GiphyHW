@@ -43,6 +43,7 @@ $(document).ready(function(){
 				image.attr('src', stillGif)
 				image.attr('still', stillGif)
 				image.attr('animated', moveGif)
+				image.attr('alt', searchReturn + ".gif")
 				image.attr('currently', 'still')
 				image.addClass('searchResults')
 				image.appendTo(resultDiv)
@@ -68,10 +69,16 @@ $(document).ready(function(){
 	})
 //adds a new button to topics
 	$(document).on('click', '.btn-success', function(){
+		if ($('#userAdd').val().trim() == ''){
+			alert('This field must have a value to add a button')
+		}		
+		else{
 		newButton = $('#userAdd').val();
 		topics.push(newButton);
+		$('#userAdd').val('');
 		initButton();
 		console.log(topics)
+		}
 	})
 	
 	
